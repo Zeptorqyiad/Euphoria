@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 	<title></title>
@@ -14,20 +14,15 @@
 
 <body>
 	<div class="wrapper">
-		<div class="header">
+		<header class="header">
 			<div class="header__container">
 				<div class="header__logo">
 					<img src="./assets/image/Header/Logo.png" alt="Logotype">
 				</div>
 				<div class="header__menu menu">
-					<div class="menu__icon icon-menu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li><a href="" class="menu__link">Shop</a></li>
+							<li><a href="" class="menu__link" id="Shop">Shop</a></li>
 							<li><a href="" class="menu__link">Men</a></li>
 							<li><a href="" class="menu__link">Women</a></li>
 							<li><a href="" class="menu__link">Combos</a></li>
@@ -35,20 +30,26 @@
 						</ul>
 					</nav>
 				</div>
-				<input class="search-panel" type="search">
-				<div class="wishlist">
-					<img src="./assets/icon/heart.svg" alt="Wishlist">
-				</div>
-				<div class="account__log">
-					<img src="./assets/icon/user.svg" alt="user">
-				</div>
-				<div class="bracket">
-					<img src="./assets/icon/shoppingCart.svg" alt="Shopping cart">
+				<input class="search-panel" placeholder="Search" type="search">
+				<div class="icon-soft">
+					<a href="" class="header-icon search-panel-min"></a>
+					<a href="" class="header-icon wishlist"></a>
+					<a href="" class="header-icon account__log"></a>
+					<a href="" class="header-icon bracket"></a>
+					<div class="header-icon menu__icon"></div>
 				</div>
 			</div>
-		</div>
+		</header>
+		<main class="main">
+			<section class="hero">
+				<div class="hero__content">
+					
+				</div>
+			</section>
+		</main>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script src="./js/script.js"></script>
 </body>
 
 </html>

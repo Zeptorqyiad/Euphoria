@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 108px;
   padding: 32px 0;
   background-color: var(--white-color);
+  z-index: 999;
 }
 
 .header__container {
@@ -155,6 +156,31 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f6f6f6;
 }
 
+.header-icon:hover {
+  animation: tiltShaking infinite 0.3s linear;
+}
+
+.menu__icon:hover {
+  animation: none;
+}
+
+@keyframes tiltShaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .wishlist {
   background-image: url("../../assets/icon/heart.svg");
   background-position: center center;
@@ -177,6 +203,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .search-panel-min {
+  display: none;
+}
+
+.burger__list {
   display: none;
 }
 
@@ -227,22 +257,59 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     background-size: 100%;
   }
+  .burger__list {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    top: 108px;
+    background-color: var(--white-color);
+    transform: translateX(100%);
+    transition: transform 0.3s ease 0s;
+  }
+  .burger__list > .burger-min-icon {
+    display: none;
+  }
+  .burger__list.active {
+    transform: translateX(0%);
+  }
 }
 @media (max-width: 459.98px) {
-  .header {
-    height: 140px;
-    padding-top: 10px;
-  }
-  .header__container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
   .header__logo {
     margin-right: 5px;
   }
   .icon-soft {
     justify-content: flex-end;
+  }
+  .search-panel-min,
+  .wishlist,
+  .account__log {
+    display: none;
+  }
+  .burger__list > .burger-min-icon {
+    display: block;
+  }
+  .burger__list {
+    flex-wrap: wrap;
+    height: 100px;
+    top: 105px;
+    left: 0;
+    z-index: 10;
+  }
+}
+@media (max-width: 402.98px) {
+  .burger__list {
+    flex-wrap: wrap;
+    height: 120px;
+    gap: 20px;
+    top: 105px;
+    left: 0;
+    z-index: 10;
   }
 }
 :root {

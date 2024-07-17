@@ -68,29 +68,14 @@
 	height: 44px;
 	border-radius: 8px;
 	background-color: #f6f6f6;
+	transition: background-color 0.3s ease 0s;
 }
 .header-icon:hover {
 	animation: tiltShaking infinite 0.3s linear;
+	background-color: var(--violet-color);
 }
-.menu__icon:hover {
-	animation: none;
-}
-@keyframes tiltShaking {
-	0% {
-		transform: rotate(0deg);
-	}
-	25% {
-		transform: rotate(5deg);
-	}
-	50% {
-		transform: rotate(0eg);
-	}
-	75% {
-		transform: rotate(-5deg);
-	}
-	100% {
-		transform: rotate(0deg);
-	}
+#Icon path:hover {
+	stroke: #fff;
 }
 .wishlist {
 	background-image: url("../../assets/icon/heart.svg");
@@ -117,6 +102,7 @@
 	display: none;
 }
 
+// ==================Media======================//
 @media (max-width: 1111.98px) {
 	.header__logo {
 		margin-right: 20px;
@@ -158,11 +144,19 @@
 	.header-icon.menu__icon {
 		display: block;
 	}
+	.menu__icon:hover {
+		animation: none;
+		background-color: initial;
+	}
 	.menu__icon {
 		background-image: url("../../assets/icon/burger-menu.svg");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: 100%;
+		transition: transform 0.1s ease 0s;
+	}
+	.menu__icon.active {
+		transform: rotate(180deg);
 	}
 	.burger__list {
 		display: block;
@@ -219,3 +213,21 @@
 		z-index: 10;
 	}
 }
+// ==================Keyframes======================//
+// @keyframes tiltShaking {
+// 	0% {
+// 		transform: rotate(0deg);
+// 	}
+// 	25% {
+// 		transform: rotate(5deg);
+// 	}
+// 	50% {
+// 		transform: rotate(0eg);
+// 	}
+// 	75% {
+// 		transform: rotate(-5deg);
+// 	}
+// 	100% {
+// 		transform: rotate(0deg);
+// 	}
+// }

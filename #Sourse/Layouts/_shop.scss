@@ -1,0 +1,45 @@
+@import "../components/ui";
+
+// =================Styles====================//
+.hero {
+	position: relative;
+	z-index: 9;
+}
+.swiper {
+	position: absolute;
+	z-index: 1;
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-hero-image {
+}
+.hero__content {
+}
+.hero__block-text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.block-text {
+}
+.subtitle-text {
+}
+.block-text__title {
+}
+.block-text__text {
+}
+.hero__btn {
+}
+.btn {
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+// =================Media====================//

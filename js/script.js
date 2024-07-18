@@ -15,7 +15,6 @@ const swiper = new Swiper('.swiper', {
       disableOnInteraction: false,
       delay: 5000,
    },
-
    pagination: {
       el: '.swiper-pagination',
    },

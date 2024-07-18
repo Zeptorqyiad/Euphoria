@@ -1,45 +1,179 @@
 @import "../components/ui";
 
-// =================Styles====================//
+// =================Hero====================//
 .hero {
 	position: relative;
-	z-index: 9;
-}
-.swiper {
-	position: absolute;
-	z-index: 1;
-}
-.swiper-wrapper {
 }
 .swiper-slide {
+	position: relative;
 }
 .swiper-hero-image {
-}
-.hero__content {
+	width: 100%;
+	height: 60vh;
 }
 .hero__block-text {
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
+	top: 40px;
+	left: 200px;
+	max-width: 439px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
 }
-.block-text {
+.block__hero-2 {
+	position: absolute;
+	top: 40px;
+	right: 200px;
+	max-width: 439px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
 }
 .subtitle-text {
+	color: var(--white-color);
+	font-family: Roboto;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 37.77px;
+	letter-spacing: 0.16px;
+	text-align: left;
+	text-transform: capitalize;
 }
 .block-text__title {
+	color: rgb(255, 255, 255);
+	font-family: Oswald;
+	font-size: 78px;
+	font-weight: 800;
+	line-height: 93.62px;
+	letter-spacing: 0.31px;
+	text-align: left;
 }
 .block-text__text {
+	color: rgb(255, 255, 255);
+	font-family: Oswald;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 47.21px;
+	letter-spacing: 0.31px;
+	text-align: left;
 }
 .hero__btn {
-}
-.btn {
+	color: rgb(60, 66, 66);
+	font-family: Oswald;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 29px;
+	padding: 16px 72px;
+	background-color: #fff;
+	border-radius: 8px;
+	border: none;
+	text-align: center;
+	display: inline-block;
+	max-width: 250px;
 }
 .swiper-pagination {
+	color: white;
 }
 .swiper-button-prev {
+	color: white;
+	margin-left: 20px;
 }
 .swiper-button-next {
+	color: white;
+	margin-right: 20px;
 }
-// =================Media====================//
+// =================Hero Media====================//
+
+// =================Explore====================//
+
+.explore__container {
+	margin-top: 130px;
+	margin-bottom: 100px;
+}
+.explore__content {
+	display: flex;
+	height: 356px;
+	justify-content: space-between;
+}
+.explore__leftside-content {
+	width: 605px;
+	background-image: url("../../assets/image/Shop/explore-1.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	border-radius: 10px;
+}
+.explore__rightside-content {
+	width: 605px;
+	background-image: url("../../assets/image/Shop/The-Foxy-Hen-Get-a-quote.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	border-radius: 10px;
+}
+.explore__block-text {
+	margin: 67px auto 80px 28px;
+	display: flex;
+	flex-direction: column;
+}
+.explore__subtitle {
+	color: var(--white-color);
+	font-family: $ff3;
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 30.07px;
+	letter-spacing: 0.25px;
+	margin-bottom: 24px;
+}
+.explore__title {
+	color: var(--white-color);
+	font-size: 34px;
+	font-weight: 800;
+	line-height: 45.1px;
+	letter-spacing: 0;
+	margin-bottom: 10px;
+	max-width: 264px;
+}
+.explore__text {
+	color: var(--white-color);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 25.06px;
+	letter-spacing: 0.25px;
+	margin-bottom: 42px;
+}
+.explore__link {
+	color: var(--white-color);
+	font-size: 20px;
+	font-weight: 800;
+	line-height: 30.13px;
+	text-decoration-line: underline;
+}
+// =================Explore Media====================//
+
+@media (max-width: 1259.98px) {
+	.explore__content {
+		display: flex;
+		gap: 10px;
+	}
+}
+@media (max-width: 767.98px) {
+	.explore__content {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+	.explore__leftside-content,
+	.explore__rightside-content {
+		width: 100%;
+	}
+}
+@media (max-width: 375.98px) {
+	.explore__block-text {
+		margin: 67px auto 50px 10px;
+	}
+}
+
+// =================Arrival====================//
+
+// =================Arrival Media====================//

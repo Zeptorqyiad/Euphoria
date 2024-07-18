@@ -52,9 +52,9 @@
 		</header>
 		<main class="main">
 			<section class="hero">
-				<div class="swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
+				<div class="swiper swiper-hero">
+					<div class="swiper-wrapper swiper-wrapper-hero">
+						<div class="swiper-slide slide-hero">
 							<img class="swiper-hero-image" src="./assets/image/Shop/Hero.jpeg" alt="Slide1">
 							<article class="hero__block-text block-text">
 								<div id="subtitleText" class="subtitle-text">T-shirt / Tops</div>
@@ -63,7 +63,7 @@
 								<a href="" class="hero__btn">Shop Now</a>
 							</article>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide slide-hero">
 							<img class="swiper-hero-image" src="./assets/image/Shop/Hero2.jpg" alt="Slide1">
 							<article class=" block__hero-2 block-text">
 								<div id="subtitleText" class="subtitle-text">Bags / Shoes</div>
@@ -73,9 +73,10 @@
 							</article>
 						</div>
 					</div>
-					<div class="swiper-pagination"></div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
+					<div class="swiper-pagination hero-pagination"></div>
+					<div class="swiper-button-prev hero-prev"></div>
+					<div class="swiper-button-next hero-next"></div>
+					<div class="swiper-scrollbar"></div>
 				</div>
 			</section>
 			<section class="explore">
@@ -102,7 +103,31 @@
 					</div>
 				</div>
 			</section>
-			<section class="arrival"></section>
+			<section class="arrival">
+				<div class="arrival__container">
+					<div class="arrival__wrapper-text">
+						<p>New Arrival</p>
+					</div>
+					<div class="arrival__content">
+						<a href="" class="arrival__column">
+							<img src="./assets/image/Shop/Knitted.png" alt="Knitted Joggers" class="arrival-image">
+							<p class="arival-text">Knitted Joggers</p>
+						</a>
+						<a href="" class="arrival__column">
+							<img src="./assets/image/Shop/Steeve.png" alt="Full Sleeve" class="arrival-image">
+							<p class="arival-text">Full Sleeve</p>
+						</a>
+						<a href="" class="arrival__column">
+							<img src="./assets/image/Shop/Active.png" alt="Active T-Shirts" class="arrival-image">
+							<p class="arival-text">Active T-Shirts</p>
+						</a>
+						<a href="" class="arrival__column">
+							<img src="./assets/image/Shop/Urban.png" alt="Urban Shirts" class="arrival-image">
+							<p class="arival-text">Urban Shirts</p>
+						</a>
+					</div>
+				</div>
+			</section>
 		</main>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

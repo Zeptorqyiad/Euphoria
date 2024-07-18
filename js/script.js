@@ -9,12 +9,9 @@ burgerIcon.addEventListener('click', () => {
    }
 })
 
-const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
    loop: true,
-   autoplay: {
-      disableOnInteraction: false,
-      delay: 5000,
-   },
+
    pagination: {
       el: '.swiper-pagination',
    },
@@ -26,5 +23,10 @@ const swiper = new Swiper('.swiper', {
 
    scrollbar: {
       el: '.swiper-scrollbar',
+   },
+   autoplay: {
+      disableOnInteraction: false,
+      delay: 5000,
+      stopOnLastSlide: false,
    },
 })

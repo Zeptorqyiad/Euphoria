@@ -562,7 +562,8 @@ body {
   gap: 70px;
 }
 
-.arrival__wrapper-text p {
+.arrival__wrapper-text,
+.wrapper__text {
   color: var(--dark-color);
   font-family: Roboto;
   font-size: 34px;
@@ -602,6 +603,90 @@ body {
   line-height: 24px;
   letter-spacing: 1%;
   text-align: left;
+}
+
+@media (max-width: 1129.98px) {
+  .arrival__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+.saving-zone {
+  margin-bottom: 100px;
+}
+
+.saving-zone__content {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.saving-zone__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, 393px);
+  gap: 20px;
+  grid-auto-flow: row;
+  grid-template-areas: "A B C" "D D E";
+}
+
+.zone-item-top-1 {
+  grid-area: A;
+  width: 400px;
+  height: 393px;
+  background-image: url("../../assets/image/Shop/1.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.zone-item-top-2 {
+  grid-area: B;
+  width: 400px;
+  height: 393px;
+  background-image: url("../../assets/image/Shop/2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.zone-item-top-3 {
+  grid-area: C;
+  width: 400px;
+  height: 393px;
+  background-image: url("../../assets/image/Shop/3.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.zone-item-bottom {
+  display: grid;
+  grid-area: D;
+  grid-template-columns: repeat(2, 610px);
+  grid-template-rows: 393px;
+  gap: 20px;
+  grid-auto-flow: row;
+  grid-template-areas: ". .";
+}
+
+.bottom-first {
+  grid-area: D;
+  background-image: url("../../assets/image/Shop/4.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.bottom-second {
+  grid-area: E;
+  background-image: url("../../assets/image/Shop/5.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
 }
 
 :root {

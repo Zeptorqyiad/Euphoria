@@ -939,6 +939,9 @@ body {
   }
 }
 @media (max-width: 767.98px) {
+  .fashion {
+    margin-bottom: -100px;
+  }
   .fashion__container {
     display: flex;
     flex-direction: column;
@@ -1014,6 +1017,160 @@ body {
   text-align: left;
 }
 
+.grid-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 273px);
+  grid-template-rows: repeat(1, 451px);
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+
+@media (max-width: 1268.98px) {
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 273px);
+    grid-template-rows: repeat(auto-fit, 451px);
+    row-gap: 50px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    justify-content: space-evenly;
+  }
+}
+.brands {
+  margin-bottom: 77px;
+}
+
+.brands__container {
+  box-sizing: border-box;
+  border: 1.07px solid rgb(50, 50, 50);
+  border-radius: 12px;
+  background: rgb(60, 66, 66);
+  max-height: auto;
+}
+
+.brands__content {
+  display: flex;
+  flex-direction: column;
+  padding: 43px 124px 60px 124px;
+}
+
+.brands__title {
+  color: var(--white-color);
+  font-family: Roboto;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 49px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.brands__text {
+  color: var(--white-color);
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 67px;
+}
+
+.brands__text span {
+  color: #fbd103;
+}
+
+.brands__shops {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brands__canvas, .brands__shops .brands__canvas:nth-child(5), .brands__shops .brands__canvas:nth-child(4), .brands__shops .brands__canvas:nth-child(3), .brands__shops .brands__canvas:nth-child(2), .brands__shops .brands__canvas:nth-child(1) {
+  width: 177px;
+  height: 85px;
+  border-radius: 12px;
+  background: var(--white-color);
+}
+
+.brands__canvas, .brands__shops .brands__canvas:nth-child(5), .brands__shops .brands__canvas:nth-child(4), .brands__shops .brands__canvas:nth-child(3), .brands__shops .brands__canvas:nth-child(2), .brands__shops .brands__canvas:nth-child(1) {
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+}
+
+.brands__shops .brands__canvas:nth-child(1) {
+  background-image: url("../../assets/image/Shop/Nike.png");
+}
+
+.brands__shops .brands__canvas:nth-child(2) {
+  background-image: url("../../assets/image/Shop/H&M.png");
+}
+
+.brands__shops .brands__canvas:nth-child(3) {
+  background-image: url("../../assets/image/Shop/Levis.png");
+}
+
+.brands__shops .brands__canvas:nth-child(4) {
+  background-image: url("../../assets/image/Shop/Polo.png");
+}
+
+.brands__shops .brands__canvas:nth-child(5) {
+  background-image: url("../../assets/image/Shop/Puma.png");
+}
+
+@media (max-width: 1289.98px) {
+  .brands__container {
+    margin: 0 15px;
+  }
+  .brands__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .brands__shops {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+@media (max-width: 673.98px) {
+  .brands {
+    margin-bottom: 57px;
+  }
+  .brands__content {
+    padding: 43px 84px 60px 84px;
+  }
+  .brands__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .brands__title {
+    font-size: 40px;
+  }
+  .brands__text {
+    font-size: 18px;
+    margin-bottom: 47px;
+  }
+}
+@media (max-width: 431.98px) {
+  .brands__content {
+    padding: 43px 40px 60px 40px;
+  }
+  .brands__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .brands__title {
+    font-size: 30px;
+    line-height: 39px;
+    margin-bottom: 15px;
+  }
+  .brands__text {
+    font-size: 16px;
+    margin-bottom: 27px;
+  }
+}
 :root {
   --dark-color: #3c4242;
   --grey-color: #807d7e;

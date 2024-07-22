@@ -1171,6 +1171,30 @@ body {
     margin-bottom: 27px;
   }
 }
+.limelight__container {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.item-rs-price {
+  color: var(--dark-color);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  padding: 10px 19px;
+  box-sizing: border-box;
+  background-color: #edeef2;
+  border-radius: 8px;
+  border: none;
+}
+
+.feedback-swiper {
+  margin: 70px 0 100px 0;
+}
+
 :root {
   --dark-color: #3c4242;
   --grey-color: #807d7e;

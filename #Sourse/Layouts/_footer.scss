@@ -1,0 +1,81 @@
+@import "../components/ui";
+
+.footer {
+	background-color: #3c4242;
+	padding: 59px 0;
+}
+.footer__content {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.footer__info {
+	display: flex;
+	justify-content: space-around;
+}
+.footer__info-help,
+.footer__info-company,
+.footer__info-moreinfo,
+.footer__info-location {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.footer__info-help h3,
+.footer__info-company h3,
+.footer__info-moreinfo h3,
+.footer__info-location h3 {
+	color: rgb(246, 246, 246);
+	font-family: $ff1;
+	font-size: 28.58px;
+	font-weight: 700;
+	line-height: 200%;
+	text-align: left;
+}
+.footer__info-help > a,
+.footer__info-company > a,
+.footer__info-moreinfo > a,
+.footer__info-location > a {
+	color: rgb(246, 246, 246);
+	font-family: $ff2;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 216.9%;
+	text-align: left;
+}
+.footer__links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 145px 0 47px;
+}
+.footer__web-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.footer__download-link {
+	display: flex;
+	flex-direction: column;
+	gap: 19px;
+}
+.footer__download-link h3 {
+	color: rgb(246, 246, 246);
+	font-family: $ff2;
+	font-size: 28.58px;
+	font-weight: 700;
+	line-height: 216.9%;
+	text-align: left;
+}
+.footer__copyright {
+	color: var(--white-color);
+	font-family: $ff2;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 200%;
+	letter-spacing: 0%;
+	text-align: center;
+}
+.footer__copyright {
+	margin-top: 40px;
+}

@@ -9,7 +9,7 @@ burgerIcon.addEventListener('click', () => {
    }
 })
 
-const bannerSwiper = new Swiper('.swiper-hero', {
+new Swiper('.swiper-hero', {
    loop: true,
    pagination: {
       el: '.hero-pagination',
@@ -27,22 +27,3 @@ const bannerSwiper = new Swiper('.swiper-hero', {
       stopOnLastSlide: false,
    },
 })
-bannerSwiper()
-
-const feedbackSwiper = new Swiper('.feedback-swiper', {
-   loop: true,
-   slidesPerView: 3,
-
-   pagination: {
-      el: '.feedback-pagination',
-   },
-   scrollbar: {
-      el: '.feedback-scrollbar',
-   },
-   autoplay: {
-      disableOnInteraction: false,
-      delay: 5000,
-      stopOnLastSlide: false,
-   },
-})
-feedbackSwiper()

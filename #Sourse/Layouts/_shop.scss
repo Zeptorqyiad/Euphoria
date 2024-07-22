@@ -13,8 +13,8 @@
 }
 .hero__block-text {
 	position: absolute;
-	top: 40px;
-	left: 200px;
+	top: 5%;
+	left: 15%;
 	max-width: 439px;
 	display: flex;
 	flex-direction: column;
@@ -22,8 +22,8 @@
 }
 .block__hero-2 {
 	position: absolute;
-	top: 40px;
-	right: 200px;
+	top: 5%;
+	right: 10%;
 	max-width: 439px;
 	display: flex;
 	flex-direction: column;
@@ -90,7 +90,111 @@
 	display: none;
 }
 // =================Hero Media====================//
-
+@media (max-width: 968.98px) {
+	.swiper-hero-image {
+		height: 50vh;
+	}
+	.hero__block-text {
+		top: 20%;
+		gap: 10px;
+	}
+	.block__hero-2 {
+		top: 20%;
+		gap: 10px;
+	}
+	.block__hero-2 {
+		gap: 10px;
+	}
+	.subtitle-text {
+		font-size: 22px;
+	}
+	.block-text__title {
+		font-size: 44px;
+		line-height: 50px;
+	}
+	.block-text__text {
+		font-size: 22px;
+	}
+	.hero__btn {
+		font-size: 16px;
+		padding: 12px 42px;
+		max-width: 150px;
+	}
+}
+@media (max-width: 681.98px) {
+	.swiper-hero-image {
+		height: 50vh;
+	}
+	.hero__block-text {
+		top: 14%;
+		gap: 10px;
+	}
+	.hero-prev {
+		display: none;
+	}
+	.hero-next {
+		display: none;
+	}
+	.block__hero-2 {
+		top: 14%;
+		gap: 10px;
+	}
+	.block__hero-2 {
+		gap: 10px;
+		right: 0;
+		width: 350px;
+	}
+	.subtitle-text {
+		font-size: 22px;
+	}
+	.block-text__title {
+		font-size: 44px;
+		line-height: 50px;
+		max-width: 350px;
+	}
+	.block-text__text {
+		font-size: 22px;
+	}
+	.hero__btn {
+		font-size: 16px;
+		padding: 12px 42px;
+		max-width: 150px;
+	}
+}
+@media (max-width: 486.98px) {
+	.swiper-hero-image {
+		height: 40vh;
+	}
+	.hero__block-text {
+		top: 10%;
+		gap: 10px;
+	}
+	.block__hero-2 {
+		top: 10%;
+		gap: 10px;
+	}
+	.block__hero-2 {
+		gap: 10px;
+		right: 0;
+		max-width: 250px;
+	}
+	.subtitle-text {
+		font-size: 22px;
+	}
+	.block-text__title {
+		font-size: 32px;
+		line-height: 50px;
+		max-width: 260px;
+	}
+	.block-text__text {
+		font-size: 22px;
+	}
+	.hero__btn {
+		font-size: 16px;
+		padding: 12px 42px;
+		max-width: 150px;
+	}
+}
 // =================Explore====================//
 
 .explore__container {
@@ -836,5 +940,3 @@
 	text-align: left;
 	overflow: hidden;
 }
-
-// =================Feedback Media====================//

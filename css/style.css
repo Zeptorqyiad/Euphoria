@@ -1,20 +1,8 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 /*Обнуление*/
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -87,12 +75,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+:root {
+  --dark-color: #3c4242;
+  --grey-color: #807d7e;
+  --white-color: #ffffff;
+  --light-grey-color: #bebcbd;
+  --thin-grey-color: #edeef2;
+  --thin-white-color: #f6f6f6;
+  --violet-color: #8a33fd;
+}
+
 .header {
   position: relative;
   height: 108px;
   padding: 32px 0;
   background-color: var(--white-color);
-  z-index: 999;
+  z-index: 997;
 }
 
 .header__container {
@@ -318,16 +316,6 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 10;
   }
 }
-:root {
-  --dark-color: #3c4242;
-  --grey-color: #807d7e;
-  --white-color: #ffffff;
-  --light-grey-color: #bebcbd;
-  --thin-grey-color: #edeef2;
-  --thin-white-color: #f6f6f6;
-  --violet-color: #8a33fd;
-}
-
 .footer {
   background-color: #3c4242;
   padding: 59px 0;
@@ -1530,8 +1518,10 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 998;
   background-color: rgba(0, 0, 0, 0.9058823529);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .account-popup__body {
@@ -1544,6 +1534,7 @@ body {
 }
 
 .account-popup__content {
+  position: relative;
   max-height: 860px;
   background-color: var(--thin-white-color);
   color: #000;
@@ -1557,10 +1548,13 @@ body {
 
 .account-popup__close {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
+  z-index: 999;
+  top: 43px;
+  right: 35px;
+  font-weight: 900;
+  cursor: pointer;
+  color: black;
+  font-size: 26px;
 }
 
 .header__popup-btn {
@@ -1613,7 +1607,7 @@ body {
 
 .main__popup-rightside {
   flex: 0 1 745px;
-  padding: 60px 100px 200px 77px;
+  padding: 40px 80px;
   display: flex;
   flex-direction: column;
   float: left;
@@ -1640,14 +1634,128 @@ body {
   padding: 14px 0;
   border-radius: 8px;
   border: 1px solid var(--dark-color);
+  cursor: pointer;
 }
 
-.main__popup-rightside > button:nth-child(2) {
+.main__popup-rightside > a:nth-child(2) {
   margin-bottom: 20px;
 }
 
-.main__popup-rightside > button:nth-child(3) {
-  margin-bottom: 50px;
+.hr__line-block {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+}
+
+.hr__line-block hr {
+  width: 247px;
+  height: 2px;
+  background: rgba(102, 102, 102, 0.25);
+}
+
+.hr__line-block span {
+  padding: 0 23px;
+  color: #666666;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.label-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label-popup span {
+  color: rgb(60, 66, 66);
+  font-family: Oswald;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 2%;
+  text-align: left;
+}
+
+.email-popup,
+.password-popup {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 1px solid rgb(60, 66, 66);
+  border-radius: 8px;
+  color: var(--dark-color);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.email-popup::-moz-placeholder, .password-popup::-moz-placeholder {
+  font-size: 16px;
+}
+
+.email-popup::placeholder,
+.password-popup::placeholder {
+  font-size: 16px;
+}
+
+.label-popup {
+  margin-bottom: 30px;
+}
+
+.password-textblock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hide-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.hide-content a {
+  color: rgb(128, 125, 126);
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.password-label > a {
+  color: var(--dark-color);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: right;
+  text-decoration-line: underline;
+}
+
+.login-popup-btn {
+  max-width: 167px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.bottom-text-popup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bottom-text-popup span {
+  color: #3c4242;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.bottom-text-popup a {
+  color: #3c4242;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-decoration: underline;
 }
 
 :root {

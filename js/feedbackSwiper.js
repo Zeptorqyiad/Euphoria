@@ -1,4 +1,4 @@
-const feedbackSwiper = new Swiper('.feedback-swiper', {
+new Swiper('.feedback-swiper', {
    loop: true,
    slidesPerView: 3,
    spaceBetween: 23,
@@ -25,4 +25,3 @@ const feedbackSwiper = new Swiper('.feedback-swiper', {
       },
    },
 })
-feedbackSwiper()

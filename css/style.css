@@ -12,6 +12,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -1509,6 +1512,142 @@ body {
   letter-spacing: 2%;
   text-align: left;
   overflow: hidden;
+}
+
+:root {
+  --dark-color: #3c4242;
+  --grey-color: #807d7e;
+  --white-color: #ffffff;
+  --light-grey-color: #bebcbd;
+  --thin-grey-color: #edeef2;
+  --thin-white-color: #f6f6f6;
+  --violet-color: #8a33fd;
+}
+
+.account-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.9058823529);
+}
+
+.account-popup__body {
+  max-width: 1440px;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-popup__content {
+  max-height: 860px;
+  background-color: var(--thin-white-color);
+  color: #000;
+  overflow: hidden;
+}
+
+.header-popup__container {
+  display: flex;
+  align-items: center;
+}
+
+.account-popup__close {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.header__popup-btn {
+  display: flex;
+  gap: 30px;
+}
+
+.header__popup-login {
+  color: var(--white-color);
+  font-family: Oswald;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  box-sizing: border-box;
+  padding: 10px 48px 12px 48px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--violet-color);
+  cursor: pointer;
+}
+
+.header__popup-signup {
+  color: var(--violet-color);
+  font-family: Oswald;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  box-sizing: border-box;
+  padding: 10px 48px 12px 48px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  border: 1px solid var(--dark-color);
+  background-color: var(--white-color);
+  cursor: pointer;
+}
+
+.header__container {
+  justify-content: space-between;
+}
+
+.main__popup {
+  display: flex;
+  max-height: 752px;
+}
+
+.main__popup-leftside {
+  flex: 0 1 695px;
+}
+
+.main__popup-rightside {
+  flex: 0 1 745px;
+  padding: 60px 100px 200px 77px;
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+
+.popup-rightside__title {
+  color: #333333;
+  font-family: Oswald;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 33px;
+  letter-spacing: 2%;
+  margin: 0 auto 46px 0;
+}
+
+.popup-rightside__auth {
+  width: 568px;
+  color: var(--violet-color);
+  font-family: Oswald;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
+  padding: 14px 0;
+  border-radius: 8px;
+  border: 1px solid var(--dark-color);
+}
+
+.main__popup-rightside > button:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.main__popup-rightside > button:nth-child(3) {
+  margin-bottom: 50px;
 }
 
 :root {

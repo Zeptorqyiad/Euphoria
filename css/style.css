@@ -1524,6 +1524,16 @@ body {
   visibility: hidden;
 }
 
+.account-popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.account-popup.open .account-popup__content {
+  opacity: 1;
+  transform: translate(0px, 0%);
+}
+
 .account-popup__body {
   max-width: 1440px;
   min-height: 100%;
@@ -1539,6 +1549,9 @@ body {
   background-color: var(--thin-white-color);
   color: #000;
   overflow: hidden;
+  opacity: 0;
+  transform: translate(0px, -100%);
+  transition: transform 0.8s ease 0s;
 }
 
 .header-popup__container {

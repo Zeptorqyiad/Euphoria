@@ -20,6 +20,6 @@ body {
 	background-color: var(--thin-white-color);
 }
 
-._lock {
+body.lock {
 	overflow: hidden;
 }

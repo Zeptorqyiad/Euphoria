@@ -17,7 +17,7 @@
 		<div id="account-popup" class="account-popup">
 			<div class="account-popup__body">
 				<div class="account-popup__content">
-					<a href="#" class="account-popup__close">X</a>
+					<a href="#" class="account-popup__close close-popup">X</a>
 					<header class="header">
 						<div class="header__container header-popup__container">
 							<div class="header__logo">
@@ -25,7 +25,7 @@
 							</div>
 							<div class="header__popup-btn">
 								<a for="account-popup" class="header__popup-login">Login</a>
-								<a for="" class="header__popup-signup">Sign Up</a>
+								<a href="#account-popup_2" class="header__popup-signup">Sign Up</a>
 							</div>
 						</div>
 					</header>
@@ -67,7 +67,60 @@
 				</div>
 			</div>
 		</div>
-		<header id="header" class="header">
+		<div id="account-popup_2" class="account-popup">
+			<div class="account-popup__body">
+				<div class="account-popup__content">
+					<a href="#" class="account-popup__close close-popup">X</a>
+					<header class="header">
+						<div class="header__container header-popup__container">
+							<div class="header__logo">
+								<img src="./assets/image/Header/Logo.png" alt="Logotype">
+							</div>
+							<div class="header__popup-btn">
+								<a href="#account-popup" class="header__popup-login">Login</a>
+								<a class="header__popup-signup">Sign Up</a>
+							</div>
+						</div>
+					</header>
+					<section class="main__popup">
+						<div class="main__popup-leftside">
+							<img src="./assets/image/Popup/1.png" alt="Popup image-login">
+						</div>
+						<div class="main__popup-rightside">
+							<h3 class="popup-rightside__title">Sign In Page</h3>
+							<a href="" class="popup-rightside__auth">Continue With Vkontakte</a>
+							<a href="" class="popup-rightside__auth">Continue With Yandex</a>
+							<div class="hr__line-block">
+								<hr />
+								<span>OR</span>
+								<hr />
+							</div>
+							<label class="label-popup" for="">
+								<span>User name or email address</span>
+								<input placeholder="Enter your name or email" type="email" class="email-popup" required>
+							</label>
+							<label class="label-popup password-label" for="">
+								<div class="password-textblock">
+									<span>Password</span>
+									<div class="hide-content">
+										<img src="./assets/icon/Hide.svg" alt="eyes hide">
+										<a href="#">Hide</a>
+									</div>
+								</div>
+								<input placeholder="Enter your password" type="password" class="password-popup" required>
+								<a href="">Forget your password</a>
+							</label>
+							<a class="header__popup-login login-popup-btn">Login</a>
+							<div class="bottom-text-popup">
+								<span>Don't have an account?</span>
+								<a href="">Sign up</a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<header id="header" class="header lock-padding">
 			<div class="header__container">
 				<div class="header__logo">
 					<img src="./assets/image/Header/Logo.png" alt="Logotype">

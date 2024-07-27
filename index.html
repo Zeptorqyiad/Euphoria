@@ -10,9 +10,35 @@
 	<link rel="stylesheet" href="./css/style.css" />
 	<link rel="icon" href="./assets/icon/free-30-instagram-stories-icons88_122635.ico" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<script src="https://yastatic.net/s3/passport-sdk/autofill/v1/sdk-suggest-with-polyfills-latest.js"></script>
+	<script src="https://yastatic.net/s3/passport-sdk/autofill/v1/sdk-suggest-token-with-polyfills-latest.js"></script>
 </head>
 
 <body>
+	<script>
+		window.YaAuthSuggest.init(
+			{
+				client_id: "a58b0aa115f540db8ee4e70ca1e45638",
+				response_type: "token",
+				redirect_uri: "http://127.0.0.1:5500/"
+			},
+			"http://127.0.0.1",
+			{
+				view: "button",
+				parentId: "buttonContainerId",
+				buttonSize: 'l',
+				buttonView: 'main',
+				buttonTheme: 'light',
+				buttonBorderRadius: "24",
+				buttonIcon: 'yaEng',
+			}
+		)
+			.then(({ handler }) => handler())
+			.then(data => console.log('Сообщение с токеном', data))
+			.catch(error => console.log('Обработка ошибки', error))
+	</script>
+
+
 	<div class="wrapper">
 		<div id="account-popup" class="account-popup">
 			<div class="account-popup__body">
@@ -67,7 +93,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="account-popup_2" class="account-popup">
+		<div id="account-popup-2" class="account-popup">
 			<div class="account-popup__body">
 				<div class="account-popup__content">
 					<a href="#" class="account-popup__close close-popup">X</a>
@@ -87,17 +113,13 @@
 							<img src="./assets/image/Popup/1.png" alt="Popup image-login">
 						</div>
 						<div class="main__popup-rightside">
-							<h3 class="popup-rightside__title">Sign In Page</h3>
-							<a href="" class="popup-rightside__auth">Continue With Vkontakte</a>
-							<a href="" class="popup-rightside__auth">Continue With Yandex</a>
-							<div class="hr__line-block">
-								<hr />
-								<span>OR</span>
-								<hr />
-							</div>
+							<h3 class="popup-rightside__title popup-rightside__title-sign">Sign Up</h3>
+							<p class="popup-rightside__subtitle-sign">Sign up for free to access to in any of our products</p>
+							<a href="" id="auth" class="popup-rightside__auth">Continue With Vkontakte</a>
+							<a href="" id="auth" class="popup-rightside__auth">Continue With Yandex</a>
 							<label class="label-popup" for="">
-								<span>User name or email address</span>
-								<input placeholder="Enter your name or email" type="email" class="email-popup" required>
+								<span>Email Address</span>
+								<input placeholder="designer@gmail.com" type="email" class="email-popup" required>
 							</label>
 							<label class="label-popup password-label" for="">
 								<div class="password-textblock">
@@ -108,12 +130,12 @@
 									</div>
 								</div>
 								<input placeholder="Enter your password" type="password" class="password-popup" required>
-								<a href="">Forget your password</a>
+								<a id="pass-text" href="">Use 8 or more characters with a mix of letters, numbers & symbols</a>
 							</label>
 							<a class="header__popup-login login-popup-btn">Login</a>
 							<div class="bottom-text-popup">
-								<span>Don't have an account?</span>
-								<a href="">Sign up</a>
+								<span>Already have an account?</span>
+								<a href="">Log in</a>
 							</div>
 						</div>
 					</section>
@@ -441,8 +463,17 @@
 				<div class="limelight__container">
 					<p class="wrapper__text">In The Limelight</p>
 					<div class="categories-grid grid-categories grid-limelight">
-						<a href="" class="categories-item">
+						<a href="##" class="categories-item">
 							<img src="./assets/image/Shop/13.png" alt="For Women">
+							<button class="add__btn-wishlist" data-product-id="001" title="Добавить в избранное">
+								<svg class="icon-heart-wishlist" width="20.000000" height="20.000000" viewBox="0 0 20 20"
+									fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<defs />
+									<path id="Icon-heart"
+										d="M4.11 4.31C2.23 5.91 1.97 8.58 3.44 10.48C4.67 12.05 8.38 15.37 9.6 16.44C9.74 16.56 9.8 16.62 9.88 16.65C9.95 16.67 10.03 16.67 10.1 16.65C10.18 16.62 10.24 16.56 10.38 16.44C11.6 15.37 15.31 12.05 16.54 10.48C18.01 8.58 17.78 5.89 15.87 4.31C13.96 2.72 11.49 3.18 9.99 4.92C8.49 3.18 5.99 2.71 4.11 4.31Z"
+										stroke="#3C4242" stroke-opacity="1" stroke-width="2" stroke-linejoin="round" />
+								</svg>
+							</button>
 							<article class="categories-item-block">
 								<div class="item-ls">
 									<span>Black Sweatshirt</span>
@@ -451,8 +482,17 @@
 								<div class="item-rs-price">$123.00</div>
 							</article>
 						</a>
-						<a href="" class="categories-item">
+						<a href="##" class="categories-item">
 							<img src="./assets/image/Shop/14.png" alt="For Women">
+							<button class="add__btn-wishlist" data-product-id="001" title="Добавить в избранное">
+								<svg class="icon-heart-wishlist" width="20.000000" height="20.000000" viewBox="0 0 20 20"
+									fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<defs />
+									<path id="Icon-heart"
+										d="M4.11 4.31C2.23 5.91 1.97 8.58 3.44 10.48C4.67 12.05 8.38 15.37 9.6 16.44C9.74 16.56 9.8 16.62 9.88 16.65C9.95 16.67 10.03 16.67 10.1 16.65C10.18 16.62 10.24 16.56 10.38 16.44C11.6 15.37 15.31 12.05 16.54 10.48C18.01 8.58 17.78 5.89 15.87 4.31C13.96 2.72 11.49 3.18 9.99 4.92C8.49 3.18 5.99 2.71 4.11 4.31Z"
+										stroke="#3C4242" stroke-opacity="1" stroke-width="2" stroke-linejoin="round" />
+								</svg>
+							</button>
 							<article class="categories-item-block">
 								<div class="item-ls">
 									<span>line Pattern Black</span>
@@ -461,8 +501,17 @@
 								<div class="item-rs-price">$37.00</div>
 							</article>
 						</a>
-						<a href="" class="categories-item">
+						<a href="##" class="categories-item">
 							<img src="./assets/image/Shop/15.png" alt="For Women">
+							<button class="add__btn-wishlist" data-product-id="001" title="Добавить в избранное">
+								<svg class="icon-heart-wishlist" width="20.000000" height="20.000000" viewBox="0 0 20 20"
+									fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<defs />
+									<path id="Icon-heart"
+										d="M4.11 4.31C2.23 5.91 1.97 8.58 3.44 10.48C4.67 12.05 8.38 15.37 9.6 16.44C9.74 16.56 9.8 16.62 9.88 16.65C9.95 16.67 10.03 16.67 10.1 16.65C10.18 16.62 10.24 16.56 10.38 16.44C11.6 15.37 15.31 12.05 16.54 10.48C18.01 8.58 17.78 5.89 15.87 4.31C13.96 2.72 11.49 3.18 9.99 4.92C8.49 3.18 5.99 2.71 4.11 4.31Z"
+										stroke="#3C4242" stroke-opacity="1" stroke-width="2" stroke-linejoin="round" />
+								</svg>
+							</button>
 							<article class="categories-item-block">
 								<div class="item-ls">
 									<span>Black Shorts</span>
@@ -471,8 +520,17 @@
 								<div class="item-rs-price">$37.00</div>
 							</article>
 						</a>
-						<a href="" class="categories-item">
+						<a href="##" class="categories-item">
 							<img src="./assets/image/Shop/16.png" alt="For Women">
+							<button class="add__btn-wishlist" data-product-id="001" title="Добавить в избранное">
+								<svg class="icon-heart-wishlist" width="20.000000" height="20.000000" viewBox="0 0 20 20"
+									fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<defs />
+									<path id="Icon-heart"
+										d="M4.11 4.31C2.23 5.91 1.97 8.58 3.44 10.48C4.67 12.05 8.38 15.37 9.6 16.44C9.74 16.56 9.8 16.62 9.88 16.65C9.95 16.67 10.03 16.67 10.1 16.65C10.18 16.62 10.24 16.56 10.38 16.44C11.6 15.37 15.31 12.05 16.54 10.48C18.01 8.58 17.78 5.89 15.87 4.31C13.96 2.72 11.49 3.18 9.99 4.92C8.49 3.18 5.99 2.71 4.11 4.31Z"
+										stroke="#3C4242" stroke-opacity="1" stroke-width="2" stroke-linejoin="round" />
+								</svg>
+							</button>
 							<article class="categories-item-block">
 								<div class="item-ls">
 									<span>Levender Hoodie</span>
@@ -648,6 +706,7 @@
 				</div>
 			</div>
 		</footer>
+
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="./js/popups.js"></script>

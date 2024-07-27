@@ -23,7 +23,7 @@ if (popupCloseIcon.length > 0) {
    for (let index = 0; index < popupCloseIcon.length; index++) {
       const el = popupCloseIcon[index]
       el.addEventListener('click', function (e) {
-         popupCloseIcon(el.closest('.account-popup'))
+         popupCLose(el.closest('.account-popup'))
          e.preventDefault()
       })
    }
@@ -33,14 +33,14 @@ function popupOpen(curentPopup) {
    if (curentPopup && unlock) {
       const popupActive = document.querySelector('.account-popup.open')
       if (popupActive) {
-         popupCloseIcon(popupActive, active)
+         popupCLose(popupActive, active)
       } else {
          bodyLock()
       }
       curentPopup.classList.add('open')
       curentPopup.addEventListener('click', function (e) {
          if (!e.target.closest('.account-popup__content')) {
-            popupCloseIcon(e.target.closest('.account-popup'))
+            popupCLose(e.target.closest('.account-popup'))
          }
       })
    }

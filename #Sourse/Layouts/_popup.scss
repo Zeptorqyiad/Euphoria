@@ -41,6 +41,7 @@
 	display: flex;
 	align-items: center;
 }
+
 .account-popup__close {
 	position: absolute;
 	z-index: 999;
@@ -109,6 +110,18 @@
 	letter-spacing: 2%;
 	margin: 0 auto 46px 0;
 }
+.popup-rightside__title-sign {
+	margin-bottom: 6px;
+}
+.popup-rightside__subtitle-sign {
+	color: rgba(102, 102, 102, 0.8);
+	font-family: $ff2;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 19px;
+	text-align: left;
+	margin: 0 auto 50px 0;
+}
 .popup-rightside__auth {
 	width: 568px;
 	color: var(--violet-color);
@@ -121,6 +134,20 @@
 	border-radius: 8px;
 	border: 1px solid var(--dark-color);
 	cursor: pointer;
+}
+#auth {
+	margin-bottom: 20px;
+}
+#pass-text {
+	display: flex;
+	align-items: flex-start;
+	color: rgb(128, 125, 126);
+	font-family: $ff1;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 19px;
+	text-align: right;
+	text-decoration: none;
 }
 .main__popup-rightside > a:nth-child(2) {
 	margin-bottom: 20px;

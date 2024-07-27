@@ -1,3 +1,21 @@
-// #Icon-heart:hover {
-// 	stroke: var(--white-color);
-// }
+#Icon-heart:hover {
+	stroke: var(--white-color);
+}
+
+#ActiveBread {
+	color: var(--dark-color);
+	font-family: $ff2;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22px;
+	cursor: auto;
+}
+#pastBread {
+	color: rgb(128, 125, 126);
+	font-family: $ff2;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 22px;
+	letter-spacing: 0%;
+	text-align: left;
+}

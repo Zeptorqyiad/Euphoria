@@ -27,3 +27,9 @@ new Swiper('.swiper-hero', {
       stopOnLastSlide: false,
    },
 })
+
+let wishlist = document.querySelector('.add__btn-wishlist')
+
+wishlist.onclick = function () {
+   console.log('Клик!')
+}

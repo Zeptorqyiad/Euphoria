@@ -1,14 +1,7 @@
 @import "../components/ui";
 
 // =================Bracket Empty====================//
-main > .cart-empty {
-	display: none; // Временное скрытие
-}
-main {
-	display: flex;
-	flex-direction: column;
-	flex: 1 1 100%;
-}
+
 .cart-empty {
 	height: 745px !important;
 	display: flex;
@@ -60,6 +53,7 @@ main {
 
 .cart {
 	margin: 50px 0;
+	display: block;
 }
 
 .cart__unregistered-content {
@@ -113,6 +107,80 @@ main {
 	> p:first-child {
 		flex: 0 1 240px;
 	}
+}
+
+// =================Bracket Script====================//
+
+.product__container {
+	display: flex;
+	align-items: center;
+	margin: 50px auto 50px auto;
+}
+.details__box {
+	display: flex;
+	gap: 20px;
+	flex: 0 1 340px;
+}
+.details__box-text {
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+}
+.image-cart {
+	width: 105px;
+	height: 120px;
+	border: none;
+	border-radius: 12px;
+}
+.details__title,
+.details__price,
+.details__totalPrice {
+	display: flex;
+	flex-wrap: wrap;
+	color: var(--dark-color);
+	font-family: $ff2;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 22px;
+}
+.details__price {
+	display: flex;
+	flex: 0 1 100px;
+	justify-content: center;
+	margin-right: 60px;
+}
+.details__quantity {
+	display: flex;
+	flex: 0 1 170px;
+	justify-content: center;
+	margin-right: 60px;
+}
+.details__btn {
+}
+.details__color,
+.details__size {
+	color: rgb(128, 125, 126);
+	font-family: $ff2;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 17px;
+}
+.details__totalPrice {
+	display: flex;
+	flex: 0 1 180px;
+	justify-content: center;
+	margin-right: 100px;
+}
+.details__shipping {
+	color: rgb(190, 188, 189);
+	font-family: $ff3;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 22px;
+	display: flex;
+	flex: 0 1 130px;
+	justify-content: center;
+	margin-right: 60px;
 }
 
 // =================Bracket Media====================//

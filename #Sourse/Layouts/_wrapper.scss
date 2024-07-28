@@ -23,3 +23,9 @@ body {
 body.lock {
 	overflow: hidden;
 }
+
+main {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 100%;
+}

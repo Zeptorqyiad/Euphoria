@@ -1995,9 +1995,15 @@ main {
 
 .details__quantity {
   display: flex;
-  flex: 0 1 170px;
+  height: 36px;
+  max-width: 100px;
   justify-content: center;
-  margin-right: 60px;
+  padding: 11px 23px;
+  margin: 0 100px 0 40px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: #dbdada;
 }
 
 .details__color,
@@ -2026,6 +2032,26 @@ main {
   flex: 0 1 130px;
   justify-content: center;
   margin-right: 60px;
+}
+
+.details__quantity--counter {
+  color: var(--dark-color);
+  font-family: Oswald;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.details__minus,
+.details__plus {
+  display: flex;
+  background-color: transparent;
+  font-size: 30px;
+  height: 52px;
+}
+
+.details__plus {
+  padding-top: 3px;
 }
 
 @media (max-width: 496px) {

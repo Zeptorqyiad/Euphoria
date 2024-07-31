@@ -1,32 +1,35 @@
 // Массив всех элементов
-let productArray = []
+let productArray = [
+   {
+      image: '../assets/image/Shop/categories-1.png',
+      title: 'Blue Flower Print Crop Top',
+      color: 'Yellow',
+      size: 'M',
+      price: '$29.00',
+   },
+   {
+      image: '../assets/image/Shop/categories-2.png',
+      title: 'Black Sweatshirt',
+      color: 'Black',
+      size: 'S',
+      price: '$39.00',
+   },
+]
+let counter = 1
+
+let cartDetails = productArray.Object.values[0]
+console.log(cartDetails)
+
+// Нужно сделать цикл, который будет доставать объекты, вытаскивая их значения
 
 // Общая структура
 let cartMain = document.querySelector('.cart__bracket')
 
-let product = {
-   image: '../assets/image/Shop/categories-1.png',
-   name: 'Blue Flower Print Crop Top',
-   color: 'Yellow',
-   size: 'M',
-   price: '$29.00',
-   // qnty: 1,
-   shipping: 'FREE',
-   subtotal: '$29.00',
-   action: '../assets/icon/Delete.svg',
-}
-
 let ul = document.createElement('ul')
 ul.classList.add('cart__list')
 
-function getStrong(text) {
-   return `<strong>${text}</strong>`
-}
-
-function getCard(image, title, color, size, price, totalPrice, removeImg) {
+function getCart(image, title, color, size, price, counter, totalPrice) {
    let productCart = document.createElement('li')
-
-   let AllInfoCart = document.createElement('div')
 
    // Создание коробки деталей
    let detailsBox = document.createElement('div')
@@ -47,8 +50,11 @@ function getCard(image, title, color, size, price, totalPrice, removeImg) {
    // Создание коробки количества
    let quantityBox = document.createElement('div')
    let quantityMinus = document.createElement('button')
+   quantityMinus.textContent = '-'
    let quantityCounter = document.createElement('span')
+   quantityCounter.textContent = counter
    let quantityPlus = document.createElement('button')
+   quantityPlus.textContent = '+'
 
    // Создание отправки
    let shippingCart = document.createElement('p')
@@ -60,7 +66,28 @@ function getCard(image, title, color, size, price, totalPrice, removeImg) {
 
    // Создание кнопки удаления
    let removeBtn = document.createElement('img')
-   removeBtn.src = removeImg
+   removeBtn.src = '../assets/icon/Delete.svg'
+
+   removeBtn.onclick = function () {
+      productCart.remove()
+   }
+
+   // Стили деталей заказа
+   productCart.classList.add('product__container')
+   detailsBox.classList.add('details__box')
+   detailsBoxText.classList.add('details__box-text')
+   imageCart.classList.add('image-cart')
+   detailsTitle.classList.add('details__title')
+   detailsColor.classList.add('details__color')
+   detailsSize.classList.add('details__size')
+   priceCart.classList.add('details__price')
+   quantityBox.classList.add('details__quantity')
+   quantityMinus.classList.add('details__minus')
+   quantityCounter.classList.add('details__quantity--counter')
+   quantityPlus.classList.add('details__plus')
+   shippingCart.classList.add('details__shipping')
+   subtotalCart.classList.add('details__totalPrice')
+   removeBtn.classList.add('details__btn')
 
    detailsBoxText.append(detailsTitle, detailsColor, detailsSize)
    detailsBox.append(imageCart, detailsBoxText)
@@ -74,64 +101,17 @@ function getCard(image, title, color, size, price, totalPrice, removeImg) {
       subtotalCart,
       removeBtn
    )
-   AllInfoCart.append(productCart)
-
-   // Стили деталей заказа
-   productCart.classList.add('product__container')
-   detailsBox.classList.add('details__box')
-   detailsBoxText.classList.add('details__box-text')
-   imageCart.classList.add('image-cart')
-   detailsTitle.classList.add('details__title')
-   detailsColor.classList.add('details__color')
-   detailsSize.classList.add('details__size')
-   priceCart.classList.add('details__price')
-   quantityBox.classList.add('details__quantity')
-   // quantityMinus.classList.add('')
-   // quantityCounter.classList.add('')
-   // quantityPlus.classList.add('')
-   shippingCart.classList.add('details__shipping')
-   subtotalCart.classList.add('details__totalPrice')
-   removeBtn.classList.add('details__btn')
-   return AllInfoCart
+   return productCart
 }
 
-let cart = getCard(
+let cart = getCart(
    '../assets/image/Shop/categories-1.png',
    'Blue Flower Print Crop Top',
    'Yellow',
    'M',
-   '$29.00',
-   '$29.00',
-   '../assets/icon/Delete.svg'
+   '$29.00'
 )
-
-let cart2 = getCard(
-   '../assets/image/Shop/categories-2.png',
-   'Black Sweatshirt',
-   'Black',
-   'S',
-   '$39.00',
-   '$39.00',
-   '../assets/icon/Delete.svg'
-)
-
-if (cart) {
-   let hr = document.createElement('hr')
-   hr.style.backgroundColor = '#BEBCBD'
-   hr.style.height = '1px'
-   hr.classList.add('hr-cart__container')
-   cart.append(hr)
-}
-
-if (cart) {
-   let emptyCart = document.querySelector('.cart-empty')
-   emptyCart.style.display = 'none'
-} else if (!cart) {
-   let bracketCart = document.querySelector('.cart')
-   emptyCart.style.display = 'block'
-   bracketCart.style.display = 'none'
-}
 
 // Добавление в коробку
-ul.append(cart, cart2)
+ul.append(cart)
 cartMain.append(ul)

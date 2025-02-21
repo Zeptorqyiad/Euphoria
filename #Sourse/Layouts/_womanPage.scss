@@ -1,0 +1,70 @@
+@import "../components/mixins";
+
+:root {
+    --dark-color: #3c4242;
+    --grey-color: #807d7e;
+    --white-color: #ffffff;
+    --light-grey-color: #bebcbd;
+    --thin-grey-color: #edeef2;
+    --thin-white-color: #f6f6f6;
+    --violet-color: #8a33fd;
+}
+//=======================================================================\
+
+.womanMain {
+    &__content {
+        @include flexbox;
+        justify-content: space-between;
+    }
+    &__sidebar {
+        flex: 0 0 295px;
+        box-sizing: border-box;
+        box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 1px solid #bebcbd80;
+        border-left: 1px solid #bebcbd80;
+        border-right: 1px solid #bebcbd80;
+        border-radius: 0px 0px 2px 2px;
+        .sidebar__filter {
+            ul {
+                padding: 40px 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 17px;
+                li {
+                    @include textDefault($ff3, var(--grey-color), 16px, 600, 19px);
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    transition: color 0.3s;
+                    &:hover {
+                        color: var(--violet-color);
+                    }
+                }
+            }
+            h2 {
+                padding: 20px 30px;
+                @include textDefault($ff3, var(--grey-color), 22px, 600, 26px);
+                text-align: left;
+                border-bottom: 1px solid #bebcbd80;
+                cursor: pointer;
+            }
+        }
+        .sidebar__price {
+            h2 {
+                padding: 20px 30px;
+                @include textDefault($ff3, var(--grey-color), 22px, 600, 26px);
+                text-align: left;
+                border-bottom: 1px solid #bebcbd80;
+                border-top: 1px solid #bebcbd80;
+            }
+        }
+    }
+    &__section {
+        flex: 100%;
+        width: 100vw;
+        &--contentGrid {
+        }
+    }
+}

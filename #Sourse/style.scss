@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
 // ФАЙЛ ОБНУЛЯЮЩИХ СТИЛЕЙ>
 @import "./components/nullstyle";
 
@@ -10,8 +11,9 @@
 @import "./Layouts/footer";
 @import "./Layouts/wrapper";
 @import "./Layouts/shop";
-@import "./Layouts/_popup";
+@import "./Layouts/popup";
 @import "./Layouts/bracket";
+@import "./Layouts/womanPage";
 
 //ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>
 @import "./Layouts/forms";

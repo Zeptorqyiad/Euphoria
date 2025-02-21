@@ -29,3 +29,7 @@ main {
 	flex-direction: column;
 	flex: 1 1 100%;
 }
+
+details summary::-webkit-details-marker {
+	display: none;
+}

@@ -15,30 +15,6 @@
 </head>
 
 <body>
-	<script>
-		window.YaAuthSuggest.init(
-			{
-				client_id: "a58b0aa115f540db8ee4e70ca1e45638",
-				response_type: "token",
-				redirect_uri: "http://127.0.0.1:5500/"
-			},
-			"http://127.0.0.1",
-			{
-				view: "button",
-				parentId: "buttonContainerId",
-				buttonSize: 'l',
-				buttonView: 'main',
-				buttonTheme: 'light',
-				buttonBorderRadius: "24",
-				buttonIcon: 'yaEng',
-			}
-		)
-			.then(({ handler }) => handler())
-			.then(data => console.log('Сообщение с токеном', data))
-			.catch(error => console.log('Обработка ошибки', error))
-	</script>
-
-
 	<div class="wrapper">
 		<div id="account-popup" class="account-popup">
 			<div class="account-popup__body">
@@ -150,21 +126,15 @@
 				<div class="header__menu menu">
 					<div class="burger__list">
 						<a href=""><span class="menu__link" id="Shop">Shop</span></a>
-						<a href=""><span class="menu__link">Men</span></a>
 						<a href=""><span class="menu__link">Women</span></a>
-						<a href=""><span class="menu__link">Combos</span></a>
-						<a href=""><span class="menu__link">Joggers</span></a>
 						<a href="" class="header-icon burger-min-icon search-panel-min"></a>
 						<a href="" class="header-icon burger-min-icon wishlist"></a>
 						<a href="#account-popup" class="header-icon burger-min-icon account__log popup-link"></a>
 					</div>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li><a href="" class="menu__link" id="Shop">Shop</a></li>
-							<li><a href="" class="menu__link">Men</a></li>
-							<li><a href="" class="menu__link">Women</a></li>
-							<li><a href="" class="menu__link">Combos</a></li>
-							<li><a href="" class="menu__link">Joggers</a></li>
+							<li><a href="./html/womenPage.html" class="menu__link" id="Shop">Shop</a></li>
+							<li><a href="./html/womenPage.html" class="menu__link">Women</a></li>
 						</ul>
 					</nav>
 				</div>

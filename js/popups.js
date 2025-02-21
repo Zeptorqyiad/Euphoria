@@ -25,7 +25,7 @@ if (popupCloseIcon.length > 0) {
       el.addEventListener('click', function (e) {
          popupCLose(el.closest('.account-popup'))
          e.preventDefault()
-      })
+		})
    }
 }
 
@@ -33,7 +33,7 @@ function popupOpen(curentPopup) {
    if (curentPopup && unlock) {
       const popupActive = document.querySelector('.account-popup.open')
       if (popupActive) {
-         popupCLose(popupActive, active)
+         popupCLose(popupActive, open)
       } else {
          bodyLock()
       }
